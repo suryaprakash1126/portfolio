@@ -2,8 +2,10 @@ services:
   - type: web
     name: portfolio
     env: python
-    buildCommand: "./build.sh"
-    startCommand: "gunicorn my_portfolio.wsgi:application"
+    buildCommand: |
+      pip install -r requirements.txt
+      python manage.py collectstatic --noinput
+    startCommand: gunicorn my_portfolio.wsgi:application
     envVars:
       - key: DATABASE_URL
         fromDatabase:
@@ -15,4 +17,4 @@ services:
         value: False
 
 databases:
-  - name: portfolio-db
+  - name: portfolio-dbb
