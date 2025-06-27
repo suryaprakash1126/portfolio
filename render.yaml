@@ -17,4 +17,4 @@ services:
         value: False
 
 databases:
-  - name: portfolio-dbb
+  - name: portfolio-db
