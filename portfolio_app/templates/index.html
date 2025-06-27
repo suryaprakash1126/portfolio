@@ -1,0 +1,261 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Surya — Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html {
+        scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body class="bg-white text-black font-sans">
+
+  <!-- NAVBAR -->
+    <header class="fixed top-0 left-0 w-full bg-white z-50 shadow-sm flex items-center justify-between px-8 py-6 border-b border-gray-200">
+    <div class="text-2xl font-bold tracking-wide">Surya</div>
+    <nav class="hidden md:flex space-x-8 text-sm font-medium">
+        <a href="#home" class="scroll-link hover:text-blue-600 transition">Home</a>
+        <a href="#about" class="hover:text-blue-600 transition">About Me</a>
+        <a href="#services" class="hover:text-blue-600 transition">Services</a>
+        <a href="#projects" class="hover:text-blue-600 transition">Projects</a>
+    </nav>
+    <div>
+        <a href="#contact" class="text-sm font-medium px-5 py-2 border border-gray-800 rounded-full hover:bg-black hover:text-white transition">Hire me</a>
+    </div>
+    </header>
+
+
+
+  <!-- HERO SECTION -->
+  <section id="home" class="px-8 py-20 mt-10 grid grid-cols-1 md:grid-cols-2 gap-10 max-w-7xl mx-auto items-center">
+    <!-- Left Text -->
+    <div>
+      <h1 class="text-5xl md:text-8xl font-medium leading-tight mb-6">Full-Stack<br />Developer</h1>
+      <p class="text-gray-600 max-w-md mb-8">
+        Hi, I'm Surya. I build powerful web applications using Django, Python, and modern front-end tools.
+      </p>
+      <!-- Brand logos -->
+      <div class="flex flex-wrap items-center gap-4">
+        <span class="bg-gray-100 px-4 py-2 rounded-full text-sm hover:bg-gray-400 hover:text-white">Vs Code</span>
+        <span class="bg-gray-100 px-4 py-2 rounded-full text-sm hover:bg-gray-400 hover:text-white">GitHub</span>
+        <span class="bg-gray-100 px-4 py-2 rounded-full text-sm hover:bg-gray-400 hover:text-white">Postman</span>
+        <span class="bg-gray-100 px-4 py-2 rounded-full text-sm hover:bg-gray-400 hover:text-white">Render</span>
+        <span class="bg-gray-100 px-4 py-2 rounded-full text-sm hover:bg-gray-400 hover:text-white">CLI</span>
+      </div>
+    </div>
+
+    <!-- Right Image + Bio -->
+    <div class="flex flex-col items-center">
+      <img src="{% static 'images/profile.png' %}" alt="profile" class="w-64 h-80 object-cover rounded-lg mb-6"> <!-- shadow-md -->
+      <p class="text-center text-sm text-gray-500 max-w-xs">
+        Hi, I'm <strong>Surya</strong>, I build powerful web applications using Django, Python, and modern front-end tools.
+      </p>
+    </div>
+  </section>
+
+
+
+    <!-- ABOUT ME SECTION -->
+    <section id="about" class="px-8 py-20 bg-gray-100 rounded-lg max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+
+    <!-- Left: Image/Video -->
+    <div>
+        <img src="{% static 'images/about.png' %}" alt="About Me" class="w-80 h-90 object-cover mx-10 rounded-lg">
+    </div>
+
+    <!-- Right: Text + Stats -->
+    <div>
+        <span class="inline-block text-sm uppercase tracking-wide text-gray-500 mb-3">About Me</span>
+        <h2 class="text-2xl md:text-3xl font-medium mb-6 leading-tight">Building complete web applications — it’s what I love doing every day.</h2>
+        <p class="text-gray-800 mb-6 font-medium">
+        I specialize in designing powerful backend systems and APIs using Django and PostgreSQL, while ensuring smooth integration with responsive frontends.
+        </p>
+
+        <div class="flex gap-8 mt-8 mx-12">
+        <div>
+            <p class="text-7xl font-medium text-blue-900 m-4 ">07+</p>
+            <p class="text-sm text-gray-500 m-4 ">Projects Completed</p>
+        </div>
+        <div>
+            <p class="text-7xl font-medium text-blue-900 m-4 ">03+</p>
+            <p class="text-sm text-gray-500 m-4">On Live</p>
+        </div>
+        </div>
+    </div>
+
+    </section>
+
+
+    <!-- SERVICES SECTION -->
+    <section id="services" class="px-8 py-20 max-w-7xl mx-auto">
+    <div class="text-center mb-12">
+        <span class="inline-block text-sm uppercase tracking-wide text-gray-500 mb-2">Services</span>
+        <h2 class="text-3xl md:text-4xl font-bold">What I Do as a Full Stack Developer</h2>
+        <p class="text-gray-600 mt-4 max-w-2xl mx-auto">A blend of backend engineering and frontend design to deliver complete web applications.</p>
+        <a href="#contact" class="mt-6 inline-block bg-gray-900 text-white px-6 py-2 rounded-full text-sm hover:bg-gray-700 transition">Hire Me</a>
+    </div>
+
+    <!-- Cards Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Card 1 -->
+        <div class="border text-black rounded-xl p-6 hover:scale-105 transition group cursor-pointer">
+        <h3 class="text-xl font-semibold mb-2">Backend Development</h3>
+        <p class="text-gray-500 text-sm">Designing and developing scalable, secure, and efficient backend systems using Django and PostgreSQL.</p>
+        <div class="mt-4 text-right">
+            <span class="text-lg group-hover:text-blue-600 transition">→</span>
+        </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="border bg-gray-200 rounded-xl p-6 hover:scale-105 transition group cursor-pointer">
+        <h3 class="text-xl font-semibold mb-2">REST API Integration</h3>
+        <p class="text-gray-600 text-sm">Building and documenting RESTful APIs using Django REST Framework (DRF) for seamless communication between frontend and backend.</p>
+        <div class="mt-4 text-right">
+            <span class="text-lg group-hover:text-blue-600 transition">→</span>
+        </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="bg-gray-400 text-white rounded-xl p-6 hover:scale-105 transition group cursor-pointer">
+        <h3 class="text-xl font-semibold mb-2">Full-stack App Deployment</h3>
+        <p class="text-sm text-gray-200">End-to-end project deployment with best practices — from code to production using tools like Git, Heroku, or Render.</p>
+        <div class="mt-4 text-right">
+            <span class="text-lg group-hover:text-blue-600 transition">→</span>
+        </div>
+        </div>
+
+        <!-- Card 4  -->
+        <div class="bg-gray-700 text-white rounded-xl p-6 hover:scale-105 transition group cursor-pointer ">
+        <h3 class="text-xl font-semibold mb-2">Frontend Development</h3>
+        <p class="text-gray-400 text-sm">Support B2B apps with the right strategy to scale using SaaS-focused techniques.</p>
+        <div class="mt-4 text-right">
+            <span class="text-lg group-hover:text-blue-600 transition">→</span>
+        </div>
+        </div>
+    </div>
+    </section>
+
+
+
+    <!-- EXPERIENCE SECTION -->
+    <section id="experience" class="px-8 py-20 max-w-7xl mx-auto">
+    <div class="text-center mb-12">
+        <span class="inline-block text-sm uppercase tracking-wide text-gray-500 mb-2">Experience & Education</span>
+        <h2 class="text-3xl md:text-4xl font-bold">A yearly snapshot of my growth as a full-stack developer</h2>
+        <p class="text-gray-600 mt-4 max-w-2xl mx-auto">A quick look at my journey — from learning core Python to building and deploying full-stack web applications.</p>
+    </div>
+
+    <!-- Timeline Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 mt-10">
+        <!-- Experience 1 -->
+        <div class="bg-gray-100 p-4 rounded-lg">
+            <h3 class="text-lg font-semibold mb-1">BCA</h3>
+            <p class="text-gray-500 text-sm mb-1">VHNSNC College - Virudhunagar.</p>
+        </div>
+        <div class="text-center md:text-center p-4 bg-gray-100 rounded-lg">
+            <p class="text-gray-700 text-2xl font-light mt-5">2020 – 2023</p>
+        </div>
+
+        <!-- Experience 2 -->
+        <div class="p-4 border rounded-lg">
+        <h3 class="text-lg font-semibold mb-1">UI/UX & Graphic Designer</h3>
+        <p class="text-gray-500 text-sm mb-1">Used Figma for design handoff. Having good knowledge in Html, Css, Js.</p>
+        </div>
+        <div class="text-center md:text-center border rounded-lg p-4">
+        <p class="text-gray-700 text-2xl font-light mt-3">2024 – 2025</p>
+        </div>
+
+        <!-- Experience 3 -->
+        <div class="p-4 bg-gray-100 rounded-lg">
+        <h3 class="text-lg font-semibold mb-1">Python Backend Developer</h3>
+        <p class="text-gray-500 text-sm mb-1">Barbikan Technology at Virudhunagar.</p>
+        </div>
+        <div class="text-center md:text-center p-4 bg-gray-100 rounded-lg">
+        <p class="text-gray-700 text-2xl font-light mt-5">2025 – Now</p>
+        </div>
+    </div>
+    </section>
+
+
+    <!-- PORTFOLIO SECTION -->
+    <section id="projects" class="px-8 py-10 max-w-7xl mx-auto">
+    <div class="text-center mb-12">
+        <span class="inline-block text-sm uppercase tracking-wide text-gray-500 mb-2">Projects</span>
+        <h2 class="text-3xl md:text-4xl font-bold">Selected Work</h2>
+        <p class="text-gray-600 mt-4 max-w-2xl mx-auto">Explore my project of creative solutions </p>
+    </div>
+
+    <!-- Project Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Project 1 -->
+        <a href="https://django-blog-9tiz.onrender.com/" class="group relative block overflow-hidden rounded-xl shadow hover:shadow-lg transition">
+        <img src="{% static 'images/project1.png' %}" alt="Project 1" class="w-full h-64 object-cover transition duration-300 group-hover:scale-105">
+        <div class="absolute bottom-0 left-0 w-full bg-black bg-opacity-30 text-white px-4 py-3 text-sm group-hover:bg-opacity-60 transition">
+            Blog API Backend (DRF)
+        </div>
+        </a>
+
+        <!-- Project 2 -->
+        <a href="#" class="group relative block overflow-hidden rounded-xl shadow hover:shadow-lg transition">
+        <img src="{% static 'images/project2.png' %}" alt="Project 2" class="w-full h-64 object-cover transition duration-300 group-hover:scale-105">
+        <div class="absolute bottom-0 left-0 w-full bg-black bg-opacity-30 text-white px-4 py-3 text-sm group-hover:bg-opacity-60 transition">
+            Notes API
+        </div>
+        </a>
+
+        <!-- Project 3 -->
+        <a href="#" class="group relative block overflow-hidden rounded-xl shadow hover:shadow-lg transition">
+        <img src="{% static 'images/project3.png' %}" alt="Project 3" class="w-full h-64 object-cover transition duration-300 group-hover:scale-105">
+        <div class="absolute bottom-0 left-0 w-full bg-black bg-opacity-30 text-white px-4 py-3 text-sm group-hover:bg-opacity-60 transition">
+            Task Manager API
+        </div>
+        </a>
+        <!-- Add more projects below as needed -->
+    </div>
+    </section>
+
+    <hr>
+
+    <!-- CONTACT ME SECTION -->
+    <section id="contact" class="px-8 py-20 max-w-4xl mx-auto text-center">
+    <h2 class="text-3xl md:text-4xl font-bold mb-4">Let’s Connect</h2>
+    <p class="text-gray-600 mb-8">
+        I’m open to freelance projects, full-time backend or full-stack roles, or even a quick tech chat.
+        Feel free to reach out via email or my social profiles below.
+    </p>
+
+    <!-- Buttons -->
+    <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+        <!-- Say Hello Button -->
+        <a href="mailto:nsuryaprakash31@gmail.com"
+        class="bg-black text-white px-8 py-3 rounded-full hover:bg-gray-800 transition text-sm font-medium">
+        Say Hello 👋
+        </a>
+
+        <!-- Resume Download Button -->
+        <a href="{% static 'resume/Surya_Resume.pdf' %}" download
+        class="border border-gray-800 px-8 py-3 rounded-full hover:bg-gray-100 transition text-sm font-medium">
+        Resume 📄
+        </a>
+    </div>
+
+    <!-- Social Links -->
+    <div class="flex justify-center gap-6 mt-10 text-xl">
+        <a href="https://github.com/suryaprakash1126" class="hover:text-blue-600 transition" target="_blank">GitHub</a>
+        <a href="https://wa.me/918637686539?text=Hi%20Surya%2C%20I%20visited%20your%20portfolio%20and%20would%20like%20to%20connect." class="hover:text-blue-600 transition" target="_blank">Watsapp</a>
+        <a href="https://www.behance.net/suryaprakashn1" class="hover:text-blue-600 transition" target="_blank">Behance</a>
+        <a href="https://dashboard.render.com/" class="hover:text-blue-600 transition" target="_blank">Render</a>
+    </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="px-8 py-6 border-t text-center text-sm text-gray-300 bg-black">
+    © {{ now.year }} Surya N — Designed & Built with ❤️ using Django + Tailwind
+    </footer>
+
+</body>
+</html>
